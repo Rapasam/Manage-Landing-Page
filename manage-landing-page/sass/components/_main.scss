@@ -1,0 +1,133 @@
+.boxes {
+  &_text {
+    text-align: center;
+    p {
+      margin-top: 1rem;
+    }
+  }
+
+  &_box {
+    padding-inline-start: 1rem;
+
+    & + & {
+      margin-top: 3rem;
+    }
+
+    .flex {
+      position: relative;
+      gap: 1rem;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50px;
+        right: 0;
+        height: 100%;
+        z-index: -1;
+
+        background-color: $Very-Pale-Red;
+      }
+    }
+
+    p {
+      margin-top: 0.8rem;
+      padding-inline-end: 1rem;
+    }
+  }
+}
+
+.pill {
+  padding: 0.45rem 1.55rem;
+  border-radius: 20px;
+
+  color: $Very-Light-Gray;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  background-color: $Bright-Red;
+}
+
+.testimonials {
+  text-align: center;
+
+  .btn-primary {
+    margin-top: 3rem;
+  }
+}
+
+.testimonial {
+  img {
+    width: 72px;
+    margin-inline: auto;
+  }
+
+  figcaption {
+    margin: 1.5rem 0;
+
+    color: $Dark-Blue;
+    font-weight: 600;
+    font-size: var(--fs-400);
+  }
+
+  p {
+    padding-inline: 10px;
+  }
+}
+
+.slider {
+  margin-top: 4rem;
+  overflow: hidden;
+
+  &_slides {
+    display: flex;
+    align-items: start;
+    width: 100%;
+
+    transition: transform 0.25s ease-in-out;
+  }
+
+  &_slide {
+    flex: 1 0 100%;
+    width: 100%;
+  }
+
+  &_button {
+    margin-top: 4rem;
+    padding: 3px;
+    border: 1px solid $Bright-Red;
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    cursor: pointer;
+
+    & + & {
+      margin-left: 5px;
+    }
+
+    &.active {
+      background-color: $Bright-Red;
+    }
+  }
+}
+
+.cta {
+  padding-block: 6rem;
+  text-align: center;
+
+  background-color: $Bright-Red;
+  background-image: url(../images/bg-simplify-section-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+
+  h2 {
+    font-size: 2.3rem;
+    line-height: 1.4;
+    color: $Very-Light-Gray;
+  }
+
+  .btn {
+    margin-top: 1.5rem;
+  }
+}

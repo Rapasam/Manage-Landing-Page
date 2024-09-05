@@ -1,0 +1,39 @@
+@import 'components/components';
+
+.container,
+.sm\:container,
+.testimonials,
+.grid-container {
+  width: max(325px, 82vw);
+  margin-inline: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.nav {
+  margin-top: 35px;
+}
+
+.header {
+  margin-top: 45px;
+}
+
+.boxes_container {
+  margin-top: 3rem;
+}
+
+.testimonials {
+  margin-top: 4rem;
+}
+
+.cta {
+  margin-top: 3rem;
+}

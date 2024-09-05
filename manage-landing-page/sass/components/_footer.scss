@@ -1,0 +1,128 @@
+.footer {
+  padding-block: 3.25rem;
+
+  background-color: $Very-Dark-Blue;
+
+  .grid-container {
+    row-gap: 3.1rem;
+  }
+
+  form {
+    position: relative;
+
+    grid-column: 1 / 13;
+    gap: 0.5rem;
+
+    input {
+      flex: 1;
+
+      padding: 0.85rem 1rem;
+      border: none;
+      border-radius: 20px;
+
+      font-size: var(--fs-300);
+      line-height: 1;
+    }
+    .btn {
+      box-shadow: none;
+    }
+
+    .error {
+      display: none;
+    }
+
+    &.invalid {
+      input {
+        border: 1px solid red;
+        color: red;
+      }
+
+      .error {
+        display: block;
+        position: absolute;
+        left: 1rem;
+        bottom: -1.75rem;
+
+        font-size: var(--fs-300);
+        font-style: italic;
+        color: red;
+      }
+    }
+  }
+
+  #nav-left {
+    grid-column: 1 / 7;
+  }
+  #nav-right {
+    grid-column: 7 / 13;
+  }
+
+  #nav-left,
+  #nav-right,
+  .social,
+  &_logo,
+  &_copyright {
+    justify-self: center;
+  }
+
+  .social {
+    grid-column: 1 / 13;
+  }
+
+  &_logo {
+    grid-column: 1 / 13;
+    transform: scale(1.1);
+  }
+  &_copyright {
+    grid-column: 1 / 13;
+
+    font-size: var(--fs-300);
+  }
+
+  &_nav {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    color: $Very-Light-Gray;
+    font-size: var(--fs-400);
+
+    > li + li {
+      margin-top: 1.1rem;
+    }
+  }
+
+  &_link {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $Bright-Red;
+    }
+  }
+}
+
+.social {
+  width: 100%;
+  justify-content: space-evenly;
+
+  &_link {
+    height: 32px;
+
+    svg {
+      width: 32px;
+    }
+
+    &:hover,
+    &:focus {
+      svg path {
+        fill: $Bright-Red;
+      }
+    }
+  }
+}
+
+.attribution {
+  color: $Dark-Grayish-Blue;
+}

@@ -1,0 +1,31 @@
+.header {
+  padding-bottom: 95px; // for second bg img
+  text-align: center;
+
+  &_text {
+    position: relative;
+
+    margin-top: 1.55rem;
+
+    p {
+      font-size: var(--fs-500);
+      margin: 0.5rem 0 2.5rem;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(700px + 25vw);
+    z-index: -2;
+
+    background-image: url(../images/bg-tablet-pattern.svg),
+      url(../images/bg-tablet-pattern.svg);
+    background-position: calc(10px + 15vw) -100px, calc(10px + 59vw) bottom;
+    background-size: calc(260px + 40vw), 320px;
+    background-repeat: no-repeat;
+  }
+}
